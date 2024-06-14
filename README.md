@@ -1,28 +1,40 @@
-DigitalOcean Debian to Arch
+# The DigitalOcean Auto-magic Arch Linux Script!
 ===========================
-DigitalOcean deprecated Arch Linux a while back because it was relatively
-difficult to support due to the rolling updates. I wrote this script to
-bring it back! This script downloads a bootstrap Arch Linux image, updates it
-to the latest version, then overwrites the host operating system with it.
 
-Warning / Disclaimer
---------------------
-<h3>ALL DATA ON THE DROPLET WILL BE UNCONDITIONALLY DESTROYED.</h3>
-This script may cause your VPS to become unbootable.
-I only recommend running this script on newly created droplets with no
-important data.
+Quickly and easily run Arch Linux on a DigitalOcean Droplet! Simply spin up a new 
+Droplet running Debian, and run the 'install.sh' bash script contained in this repo.
+A few minutes, your Debain Droplet will reboot, and rising from it's ashes will be a 
+freshly-minted Arch installation!
+Even integrates with DigitalOcean's metadata service to ensure hostname, envvars,
+and root SSH keys will be persisted upon reboot.... just like an official
+install image!
+
+> [!WARNING]
+># ⤵️ ⤵️ ⤵️ ⤵️ ⤵️ ⤵️ 
+> 
+        
+> [!CAUTION]
+> <details>
+> <summary><h1> SUPER IMPORTANT & URGENT WARNING / IRRELEVANT & POINTLESS DISCLAIMER </h1></summary>
+> <h1>ALL DATA ON THE DROPLET WILL BE UNCONDITIONALLY DESTROYED.</h3>
+> <h2>This script may cause your VPS to become unbootable.</h2>
+> <h3>I only recommend running this script on newly created droplets with no
+> important data.</h3>
+>
+> </details>
 
 Installation
 ------------
-1. Create a new Debian 9.x droplet (either 32-bit or 64-bit is fine).
+1. Create a new Debian 12 droplet
 2. In the droplet, run the following as root:
 
-        # wget https://raw.githubusercontent.com/gh2o/digitalocean-debian-to-arch/debian9/install.sh -O install.sh
+        # wget https://raw.githubusercontent.com/chrisdlees/The-DigitalOcean-Automagic-Arch-Linux-Script-/main/install.sh -O install.sh
         # bash install.sh
 
-3. Follow the instructions when prompted.
-4. Sit back and relax! The system will automatically reboot once complete,
-   and you should have a fully updated Arch Linux system in within minutes.
+3. When prompted, confirm you understand that this is a potential, probable, and also VERY likely DESTRUCTIVE ACTION... but who cares? After
+   all, you followed the instructions and are running this script on a freshly-made droplet, right?
+4. Chillax for a minute or two. The system will automatically reboot once complete,
+   signalling your fully updated Arch Linux system is ready!
 
 Advanced Configuration
 ----------------------
